@@ -8,7 +8,7 @@ body {
   background-color: #292524;
   color: #fafaf9;
   font-family: "Sono", sans-serif;
-  padding: 48px 68px;
+  padding: 48px 64px 0px;
 }
 
 .hidden {
@@ -61,12 +61,37 @@ h1 {
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 48px;
+
+  height: calc(100vh - 48px - 68px - 40px);
 }
 
 @media (max-width: 900px) {
   .main {
     grid-template-columns: 1fr;
   }
+}
+
+section {
+  overflow-y: scroll;
+  padding-bottom: 40px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .category {
@@ -128,6 +153,9 @@ h1 {
 
 .vote-buttons button:hover {
   background-color: #292524;
+}
+.vote-buttons button:disabled {
+  background-color: #57534e;
 }
 
 Ul {
